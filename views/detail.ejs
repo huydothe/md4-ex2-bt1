@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Detail staff</title>
+    <script>
+        const backList = () => {
+            window.open('http://localhost:3000/staff/list');
+        };
+    </script>
+</head>
+<body>
+<p>Name: <%= staff.name %>
+</p>
+<p>Age: <%= staff.age %>
+</p>
+<p>Address: <%= staff.address %>
+</p>
+<p>Position: <%= staff.position %>
+</p>
+<button onclick="backList()">Back list page</button>
+</body>
+</html>

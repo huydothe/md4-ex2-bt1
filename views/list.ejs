@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Books</title>
+</head>
+<body>
+<h3>List books</h3>
+<% for(let i = 0; i < staff.length; i++){ %>
+    <p>Name: <%= staff[i].name %></p>
+    <p>Age: <%= staff[i].age %></p>
+    <p>Address: <%= staff[i].address %></p>
+    <p>Position: <%= staff[i].position %></p>
+    <p>
+        <button onclick="detailStaff('<%= staff[i].id %>')">Detail</button>
+        <button onclick="deleteStaff('<%= staff[i].id %>')">Delete</button>
+    </p>
+    <br>
+<% } %>
+
+<script>
+    function detailStaff(id){
+        window.open(`http://localhost:3000/staff/detail?id=${id}`);
+    }
+
+    function deleteStaff(id){
+        window.open(`http://localhost:3000/staff/delete?id=${id}`);
+    }
+</script>
+</body>
